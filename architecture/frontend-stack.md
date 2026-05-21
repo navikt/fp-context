@@ -1,34 +1,46 @@
-# Frontend Stack
+# Frontend Technology Stack
 
-## Core stack
+## Core Stack
 
-| Technology | Usage |
-|-----------|-------|
-| React | UI framework |
-| Aksel (`@navikt/ds-*`) | Nav design system — components, tokens, icons |
-| React Hook Form | Forms + validation |
-| TanStack Query | Server state, data fetching, caching |
-| TypeScript | Strict mode |
+| Technology          | Usage                                                           |
+| ------------------- | --------------------------------------------------------------- |
+| **React**           | UI framework                                                    |
+| **Aksel**           | Nav's design system (@navikt/ds-\*) — components, tokens, icons |
+| **React Hook Form** | Form management and validation                                  |
+| **TanStack Query**  | Server state management, data fetching, caching                 |
+| **TypeScript**      | Type safety throughout                                          |
 
-## Repos
+## Repositories
 
-| Repo | Audience | Package manager | Build |
-|------|----------|----------------|-------|
-| foreldrepengesoknad | Citizen | Yarn workspaces | Turbo |
-| fp-frontend | Case worker | pnpm workspaces | Turbo |
-| fp-inntektsmelding-frontend | Employer | — | — |
-| ft-frontend-saksbehandling | Shared (case worker) | — | — |
+### foreldrepengesoknad (citizen-facing)
 
-## Rules
+- **Package manager**: pnpm
+- **Monorepo**: Workspaces with apps/ and packages/
+- **Build**: Turbo
+- **Server**: Custom Node.js server (server/, server-uinnlogget/)
+- **Storybook**: Component documentation
 
-- Use Aksel components — do not build custom when an Aksel component exists
-- WCAG 2.1 AA compliance on all citizen-facing flows
-- React Hook Form for all forms
-- TanStack Query for all API communication
+### fp-frontend (case worker UI)
+
+- **Package manager**: pnpm
+- **Monorepo**: pnpm workspaces with apps/ and packages/
+- **Build**: Turbo (turbo.json)
+- **Server**: Custom Node.js server
+- Additional shared components in repository ft-frontend-saksbehandling
+
+### fp-inntektsmelding-frontend (employer-facing)
+
+- Employer-side income reporting interface
+
+## Conventions
+
+- Use Aksel components as the primary building blocks — don't build custom
+  components when an Aksel component exists
+- Follow Nav's accessibility (WCAG) requirements in all user-facing components
+- Use React Hook Form for all form handling
+- Use TanStack Query for all API communication
 - TypeScript strict mode
 
 ## Docs
 
 - [Aksel](https://aksel.nav.no/)
-- [TanStack Query](https://tanstack.com/query/latest)
-- [React Hook Form](https://react-hook-form.com/)

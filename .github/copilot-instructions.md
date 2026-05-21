@@ -15,3 +15,4 @@ AI grounding hub for Team Foreldrepenger. Markdown-only repo, no build/test.
 
 - [AGENTS.md](../AGENTS.md) — autonomous agent workflow
 - [CONTRIBUTING.md](../CONTRIBUTING.md) — length budgets, style rules, review checklist
+- Space TeamForeldrepenger
