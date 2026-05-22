@@ -1,52 +1,52 @@
 # Dependency Management
 
-## fp-bom — parent POM
+Process and ownership for Java dependencies across all fp-repos. **Versions
+themselves live in [`fp-bom`](https://github.com/navikt/fp-bom)** — this
+document does not pin numbers.
 
-All Java repos inherit from fp-bom. Centralizes Java version, Maven plugin
-versions, test dependencies, SonarCloud config, build profiles.
+## Source of truth
 
-## Current versions (fp-bom)
+| What | Where |
+|------|-------|
+| Authoritative version pins | [`fp-bom/fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/main/fp-bom/pom.xml) and [`fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/main/pom.xml) |
+| fp-bom scope, conventions, what's in/out | [`fp-bom/.github/copilot-instructions.md`](https://github.com/navikt/fp-bom/blob/main/.github/copilot-instructions.md) |
+| Consumer view (which library to use from where) | [`architecture/team-libraries.md`](../architecture/team-libraries.md) |
+| GitHub Actions pinning policy | [`operations/ci-cd.md`](ci-cd.md#workflow-pinning--ratchet-policy) |
 
-| Dependency | Version |
-|-----------|---------|
-| Java | 25 |
-| JUnit | 6.0.3 |
-| AssertJ | 3.27.7 |
-| Mockito | 5.23.0 |
-| JaCoCo | 0.8.14 |
-| Maven Surefire | 3.5.5 |
-| Sonar Plugin | 5.6.0.6792 |
-
-Framework versions (Jetty, Jersey, Weld, Hibernate, Jackson) managed via
-fp-felles BOMs, not directly in fp-bom.
+All Java repos inherit from `fp-parent-app` (apps) or `fp-parent-lib`
+(libraries). Both import the `fp-bom` BOM. Do **not** pin or override versions
+in downstream repos.
 
 ## Dependabot
 
-- Enabled on all repos
-- Review and merge promptly
-- Fix or document blockers — don't let updates pile up
+- Enabled on all repos for the `maven` and `github-actions` ecosystems
+- Drives the upgrade cadence — review and merge promptly
+- Fix or document blockers; don't let updates pile up
+- GitHub Actions updates follow the ratchet policy in
+  [`operations/ci-cd.md#workflow-pinning--ratchet-policy`](ci-cd.md#workflow-pinning--ratchet-policy)
 
 ## Update ripple effects
 
 | Library | Consumers |
 |---------|-----------|
-| fp-bom | All Java repos |
-| fp-felles | All backend apps |
-| fp-prosesstask | All backend apps |
-| fp-kontrakter | Multiple apps |
-| fp-nare | Business rule repos + fp-sak |
-| fp-tidsserie | fp-sak, fp-uttak, others |
-| fp-uttak / fp-inngangsvilkar | fp-sak (SemVer) |
+| `fp-bom` | All Java repos |
+| `fp-felles` | All backend apps |
+| `fp-prosesstask` | All backend apps |
+| `fp-kontrakter` | Multiple apps |
+| `fp-nare` | Business rule repos + `fp-sak` |
+| `fp-tidsserie` | `fp-sak`, `fp-uttak`, others |
+| `fp-uttak` / `fp-inngangsvilkar` | `fp-sak` (SemVer) |
 
 ## Update protocol
 
 1. Change in library repo, PR + merge to main
 2. SNAPSHOT updates auto-flow to downstream
-3. For SemVer libraries: release, then update consumer pom.xml
+3. For SemVer libraries: release, then update consumer `pom.xml`
 4. Verify downstream CI is green before broad rollout
 
 ## Strategy
 
-- Stay current — Dependabot drives the cadence
-- Don't pin old versions without documented reason
-- Use Java preview features selectively when value is clear
+- `fp-bom` is the single source of truth — never pin a version locally
+- Stay current — Dependabot sets the cadence
+- Don't hold back upgrades without a documented reason
+- Use Java preview features selectively, when value is clear
