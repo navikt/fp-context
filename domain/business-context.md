@@ -2,14 +2,14 @@
 
 ## Legal basis
 
-| Source | Role |
-|--------|------|
+| Source                                                                                   | Role |
+|------------------------------------------------------------------------------------------|------|
 | [Folketrygdloven kap. 14](https://lovdata.no/dokument/NL/lov/1997-02-28-19/KAPITTEL_5-9) | Primary law governing parental benefits |
-| Rundskriv til kap. 14 | Interpretive guidelines, established practice |
-| Statens Økonomireglement | Payment ordering rules |
-| EU family directives | Cross-border coordination |
-| WCAG 2.1 AA | Accessibility for citizen-facing services |
-| GDPR + Nav internal policy | Privacy, audit, logging |
+| [Rundskriv til kap. 14](https://lovdata.no/nav/rundskriv/r14-00)                         | Interpretive guidelines, established practice |
+| Statens Økonomireglement                                                                 | Payment ordering rules |
+| EU family directives                                                                     | Cross-border coordination |
+| WCAG 2.1 AA                                                                              | Accessibility for citizen-facing services |
+| GDPR + Nav internal policy                                                               | Privacy, audit, logging |
 
 ## Benefits
 
