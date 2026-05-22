@@ -16,13 +16,17 @@
 
 | Term | English | Code home |
 |------|---------|-----------|
-| Fagsak | Subject case | fp-sak |
-| Behandling | Case/treatment | fp-sak |
+| Familiehendelse | Family event (birth/adoption) — anchor for fagsak | fp-sak |
+| Fagsak | The full case folder for one familiehendelse + ytelse | fp-sak |
+| Saksnummer | Stable case ID, used by Joark/SAF and OS | fp-sak |
+| Behandling | One processing instance ending in vedtak/dismissal | fp-sak (tilbakekreving in fptilbake) |
 | Førstegangsbehandling | Initial processing | fp-sak |
-| Revurdering | Reassessment | fp-sak |
-| Klage | Appeal | fp-sak |
+| Revurdering | Reassessment (event-driven changes) | fp-sak |
+| Klage | Complaint/appeal (internal) | fp-sak |
 | Anke | Second appeal (Trygderetten) | fp-sak |
 | Innsyn | Document access request | fp-sak |
+| Tilbakekreving | Recovery of overpaid benefit | fptilbake |
+| Vedtak | Decision: grant/change/deny — materialized as oppdrag + brev + events | fp-sak, fptilbake |
 
 ## Benefit specifics
 

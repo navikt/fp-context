@@ -55,7 +55,7 @@
 | fp-los | Case queue (oppgavestyring) |
 | fp-formidling | Document generation, correspondence |
 | fp-dokgen | Document template engine |
-| fpoppdrag | Payment order submission |
+| fpoppdrag | Simulation of payment plan changes (balance impact, periods to repay) |
 | fp-risk | Fraud risk scoring |
 | fp-oversikt | Citizen case status view |
 | fp-inntektsmelding | Employer income reporting backend |
@@ -89,9 +89,13 @@ Citizen → foreldrepengesoknad → fp-mottak → fp-sak
                                               └─ fp-uttak (allocation)
                                                   ↓
                                               Vedtak
-                                                  ├─ fpoppdrag (payment)
+                                                  ├─ oppdrag → OS (external) over JMS, kvittering on return queue
                                                   └─ fp-formidling (letters)
-Side: fp-los (queue), fp-risk (scoring), fptilbake (recovery), fp-oversikt (status view)
+
+OS (Oppdragssystemet, external) → kravgrunnlag over JMS → fptilbake (recovery)
+fp-sak (revurdering) → fpoppdrag (simulate balance impact) → varsel → fptilbake (early start)
+
+Side: fp-los (queue), fp-risk (scoring), fp-oversikt (status view)
 ```
 
 ## Deployment
