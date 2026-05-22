@@ -10,9 +10,14 @@ choosing between a shared library component and a local implementation.
 | `fp-parent-app` | Deployable applications |
 | `fp-parent-lib` | Libraries |
 
-Owns external dependency versions (Jakarta EE 10, Jetty, Jersey, Weld,
-Hibernate, Jackson, Kafka, IBM MQ, Ehcache, token-support). Do not pin
-versions locally — defer to BOM. Upgrades land here first.
+Owns external dependency versions for the pure FP platform: Jakarta EE 11,
+Jetty, Jersey (server only), Weld CDI, Hibernate, Jackson (moving from 2 to 3),
+Kafka 4. Do not pin versions locally — defer to BOM. Upgrades land here first.
+
+Not in fp-bom:
+- JMS / IBM MQ — see `fp-jms-integrasjon`
+- token-support — only used by unicorns (`fp-infotrygd`, `fp-ws-proxy`)
+- No Spring Boot, no Ehcache
 
 ## fp-felles/felles — building blocks
 
