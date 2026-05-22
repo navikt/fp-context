@@ -36,10 +36,19 @@ table-first. Primary audience is AI, not humans.
 
 ## Companion hubs
 
+Team Foreldrepenger AI context is split across three repos. **fp-context** is
+the navigational hub and policy owner; the others own their domain content.
+Downstream repos can point at fp-context alone — it routes onward.
+
+| Role | Hub | Owns |
+|------|-----|------|
+| Navigational hub + cross-cutting policy | **fp-context** *(this)* | Domain, architecture, conventions, workflow pinning policy, dependency strategy |
+| GitHub Actions content | [fp-gha-workflows](https://github.com/navikt/fp-gha-workflows) | Reusable workflows + composite actions catalog |
+| Java dependency content | [fp-bom](https://github.com/navikt/fp-bom) | Version pins (Jakarta EE 11 platform), parent POMs |
+
+Other shared-code hubs:
+
 | Hub | Scope |
 |-----|-------|
-| **fp-context** *(this)* | AI grounding: domain, architecture, conventions |
-| [fp-gha-workflows](https://github.com/navikt/fp-gha-workflows) | Reusable workflows and composite actions |
-| [fp-bom](https://github.com/navikt/fp-bom) | Parent POM, dependency and plugin versions |
-| [fp-felles](https://github.com/navikt/fp-felles) | Common Java code |
+| [fp-felles](https://github.com/navikt/fp-felles) | Common Java building blocks (see [architecture/team-libraries.md](architecture/team-libraries.md)) |
 | [fp-autotest](https://github.com/navikt/fp-autotest) | Integration tests for backend apps |
