@@ -1,0 +1,34 @@
+# navikt/fp-context
+
+> Navigational hub and cross-cutting policy authority for Foreldrepenger AI context across all downstream repositories.
+
+This hub serves as the primary grounding point for AI assistants, IDE agents, and GitHub Copilot spaces operating within Team Foreldrepenger (@navikt/teamforeldrepenger). It translates Norwegian legal frameworks (Folketrygdloven Kap. 14) into software architectural concepts and dictates standards for the application stack.
+
+## Core Context & Domain
+
+- [Domain and Business Context](domain/business-context.md): Core business logic based on Folketrygdloven kap. 14, system value chain, and key business concepts.
+- [Domain Glossary](domain/glossary.md): Bidirectional mapping of Norwegian domain terms to codebase concepts to prevent model hallucination.
+
+## Architecture & Technology Stack
+
+- [System Overview](architecture/system-overview.md): Repository tier classification, data flow diagrams, and NAIS runtime deployment mapping.
+- [Backend Stack](architecture/backend-stack.md): Specifications for Java ecosystem architecture including Jetty, Jersey, Weld, Hibernate, and Jackson.
+- [Frontend Stack](architecture/frontend-stack.md): Framework rules for React, Aksel design system, React Hook Form, and TanStack.
+
+## Code Conventions & Workflows
+
+- [Java Codestyle](conventions/java-codestyle.md): Functional and fluent paradigms for Java 25+ compilation targets.
+- [Engineering Workflow](conventions/workflow.md): Trunk-based development protocols, Pull Request standards, and CI/CD validation gates.
+- [Testing Mechanisms](conventions/testing.md): Execution layout splitting unit tests (per repo) from integration setups (fp-autotest).
+
+## Operations & Infrastructure
+
+- [CI/CD Pipelines](operations/ci-cd.md): Configuration architecture for fp-gha-workflows, SonarCloud analytics, and NAIS platform targets.
+- [Dependency Management](operations/dependency-management.md): Governance rules regarding fp-bom usage and automated Dependabot lifecycles.
+
+## Optional
+
+- [Contribution Guidelines](CONTRIBUTING.md): Explicit instructions for modifying context files, enforcing an AI-first, data-dense, table-centric layout.
+- [Companion Hub: GitHub Actions](https://github.com): Reusable workflows and composite actions catalog referenced by this hub.
+- [Companion Hub: Java BOM](https://github.com): Strict version pins, Jakarta EE 11 platform declarations, and parent POM definitions.
+- [Shared Code: Common Blocks](https://github.com): Core shared Java components utilized across backend microservices.
