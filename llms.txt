@@ -7,6 +7,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 ## Core Context & Domain
 
 - [Domain and Business Context](domain/business-context.md): Core business logic based on Folketrygdloven kap. 14, system value chain, and key business concepts.
+- [Legal History](domain/legal-history.md): significant rule changes, effective dates, source links, and fp-sak rule-set concepts.
 - [Domain Glossary](domain/glossary.md): Bidirectional mapping of Norwegian domain terms to codebase concepts to prevent model hallucination.
 - [Planning Heuristics](domain/planning-heuristics.md): Citizen-facing planning guidance — barnehage timing, dekningsgrad decision by birth month, employer coordination, gap-bridging strategies, related benefits and services.
 

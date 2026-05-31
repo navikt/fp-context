@@ -84,7 +84,7 @@ Note: gap estimates assume continuous leave from 3 weeks before birth. Actual da
 | Apr–Jun | Evaluate both 100 % and 80 % | 80 % may close the gap entirely; 100 % gives higher monthly payout but shorter coverage |
 | Jul–Nov | 100 % most relevant          | FP period already reaches barnehage start; 80 % extends unnecessarily at lower payout |
 
-The choice applies to both parents — once selected, both get the same dekningsgrad. Since July 2024, the 80 % period is 61 weeks + 1 day (was 59 weeks), making total payout roughly equal regardless of choice.
+The choice applies to both parents — once selected, both get the same dekningsgrad. Since July 2024, the 80 % period is 61 weeks + 1 day (was 59 weeks) (see legal-history.md for source), making total payout roughly equal regardless of choice.
 
 ### Confirmed by statistics
 
