@@ -29,7 +29,7 @@ Sub-suites by ytelse: `foreldrepenger`, `engangsstonad`, `svangerskapspenger`.
 | fp-kalkulus | fpkalkulus, fpsak, verdikjede |
 | fptilbake | fptilbake, verdikjede |
 | fplos | fplos |
-| fp-formidling, fpoppdrag, fp-mottak, fp-risk, fp-oversikt, fp-dokgen, fp-inntektsmelding, fp-soknad | verdikjede |
+| fp-formidling, fpoppdrag, fp-mottak, fp-oversikt, fp-dokgen, fp-inntektsmelding, fp-soknad | verdikjede |
 
 ## Run commands (in fp-autotest)
 

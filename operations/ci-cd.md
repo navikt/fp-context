@@ -14,7 +14,6 @@ their own:
 |------|--------|
 | `fp-gha-workflows` | Hosts the reusable workflows themselves |
 | `fp-baseimages` | Matrix build of base images; bespoke release flow |
-| `fp-iac` | Matrix deploy of infrastructure (alerts, Kafka, Redis) per cluster |
 | `fp-autotest` | Scheduled cross-app integration test runs + reporting |
 
 All foreldrepenger-/fp-repos should compose workflows using from `fp-gha-workflows` 
@@ -47,11 +46,11 @@ fp-repo — reusable, local, or composed.
 
 ## Deployment
 
-| Aspect | Value |
-|--------|-------|
-| Platform | NAIS (Kubernetes) |
-| Image registry | Google Artifact Registry |
-| Image tag | Commit SHA |
-| Environments | dev-gcp/dev-fss, prod-gcp/prod-fss |
-| Config | `.nais/` in each app repo or `fp-iac` |
-| Base images | `fp-baseimages` |
+| Aspect | Value                                    |
+|--------|------------------------------------------|
+| Platform | NAIS (Kubernetes)                        |
+| Image registry | Google Artifact Registry                 |
+| Image tag | Commit SHA                               |
+| Environments | dev-gcp/dev-fss, prod-gcp/prod-fss       |
+| Config | `.deploy/` in each app repo or `fp-iac` |
+| Base images | `fp-baseimages`                          |

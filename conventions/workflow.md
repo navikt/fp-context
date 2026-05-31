@@ -2,13 +2,13 @@
 
 ## Branching
 
-- Trunk-based: short-lived feature branches off `main`
+- Trunk-based: short-lived feature branches off `master`
 - No long-lived dev or release branches
-- `main` is always deployable
+- `master` is always deployable
 
 ## Pull requests
 
-- All changes via PR (no direct push to `main`)
+- All changes via PR (no direct push to `master`)
 - ≥1 reviewer
 - Descriptive title (becomes the squash-merge commit)
 - Keep PRs focused and small
@@ -29,7 +29,7 @@
 | Repo type | Strategy |
 |-----------|----------|
 | Application | Trunk-based, no version (deploy latest) |
-| Library (fp-felles, fp-prosesstask, fp-nare, fp-tidsserie) | SNAPSHOT on main, release on demand |
+| Library (fp-felles, fp-prosesstask, fp-nare, fp-tidsserie) | SNAPSHOT on master, release on demand |
 | Business rule (fp-uttak, fp-inngangsvilkar, fp-stonadskonto, etc.) | SemVer — major bump for breaking |
 
 ## Dependencies

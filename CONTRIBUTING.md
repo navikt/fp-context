@@ -59,7 +59,7 @@ Update README.md index when adding a new file.
 ## Workflow
 
 Standard team flow:
-1. Branch from `main`
+1. Branch from `master`
 2. Edit (within budgets)
 3. PR with description of what and why
 4. One reviewer

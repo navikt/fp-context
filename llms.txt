@@ -8,6 +8,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 
 - [Domain and Business Context](domain/business-context.md): Core business logic based on Folketrygdloven kap. 14, system value chain, and key business concepts.
 - [Domain Glossary](domain/glossary.md): Bidirectional mapping of Norwegian domain terms to codebase concepts to prevent model hallucination.
+- [Planning Heuristics](domain/planning-heuristics.md): Citizen-facing planning guidance — barnehage timing, dekningsgrad decision by birth month, employer coordination, gap-bridging strategies, related benefits and services.
 
 ## Architecture & Technology Stack
 
@@ -29,6 +30,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 ## Optional
 
 - [Contribution Guidelines](CONTRIBUTING.md): Explicit instructions for modifying context files, enforcing an AI-first, data-dense, table-centric layout.
-- [Companion Hub: GitHub Actions](https://github.com): Reusable workflows and composite actions catalog referenced by this hub.
-- [Companion Hub: Java BOM](https://github.com): Strict version pins, Jakarta EE 11 platform declarations, and parent POM definitions.
-- [Shared Code: Common Blocks](https://github.com): Core shared Java components utilized across backend microservices.
+- [Companion Hub: GitHub Actions](navikt/foreldrepengesoknad): Monorepo for all citizen-facing applications, both open and log-in.
+- [Companion Hub: GitHub Actions](navikt/fp-gha-workflows): Reusable workflows and composite actions catalog referenced by this hub.
+- [Companion Hub: Java BOM](navikt/fp-bom): Strict version pins, Jakarta EE 11 platform declarations, and parent POM definitions.
+- [Shared Code: Common Blocks](navikt/fp-felles): Core shared Java components utilized across backend microservices.

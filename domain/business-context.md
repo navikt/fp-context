@@ -2,14 +2,15 @@
 
 ## Legal basis
 
-| Source                                                                                   | Role |
-|------------------------------------------------------------------------------------------|------|
-| [Folketrygdloven kap. 14](https://lovdata.no/dokument/NL/lov/1997-02-28-19/KAPITTEL_5-9) | Primary law governing parental benefits |
-| [Rundskriv til kap. 14](https://lovdata.no/nav/rundskriv/r14-00)                         | Interpretive guidelines, established practice |
-| Statens Økonomireglement                                                                 | Payment ordering rules |
-| EU family directives                                                                     | Cross-border coordination |
-| WCAG 2.1 AA                                                                              | Accessibility for citizen-facing services |
-| GDPR + Nav internal policy                                                               | Privacy, audit, logging |
+| Source                                                                                   | Role                                                                         |
+|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| [Folketrygdloven kap. 14](https://lovdata.no/dokument/NL/lov/1997-02-28-19/kap14) | Primary law governing parental benefits                                      |
+| [Rundskriv til kap. 14](https://lovdata.no/nav/rundskriv/r14-00)                         | Interpretive guidelines, established practice                                |
+| [Folketrygdloven kap. 8](https://lovdata.no/dokument/NL/lov/1997-02-28-19/kap8)  | Foreldrepenger caclulations follow Sykepenger unless stated in chapter 14-7. |
+| Statens Økonomireglement                                                                 | Government financial system rules                                            |
+| EU family directives                                                                     | Cross-border coordination                                                    |
+| WCAG 2.1 AA                                                                              | Accessibility for citizen-facing services                                    |
+| GDPR + Nav internal policy                                                               | Privacy, audit, logging                                                      |
 
 ## Benefits
 
@@ -52,7 +53,6 @@ Citizen/Employer → Mottak → Saksbehandling → Vedtak → Utbetaling
 | Simulering (balance impact) | fpoppdrag (simulates plan changes, provides repayment periods) |
 | Brev (letters) | fp-formidling, fp-dokgen |
 | Tilbakekreving (recovery) | fptilbake (kravgrunnlag from OS over JMS) |
-| Risk scoring | fp-risk |
 | Citizen overview | fp-oversikt |
 
 ## Core concepts
