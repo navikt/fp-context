@@ -9,7 +9,6 @@
 | fp-bom | Parent POM, Java/plugin/dependency versions |
 | fp-gha-workflows | Reusable GitHub Actions workflows + composite actions |
 | fp-baseimages | Base Docker images for Java apps |
-| fp-iac | Infrastructure as code (NAIS, alerts) |
 
 ### Tier 2 — Common libraries
 
@@ -21,6 +20,7 @@
 | fp-nare | Rule engine (specification pattern, traceable evaluation trees) |
 | fp-tidsserie | Time-series of fom/tom/value segments |
 | fp-graphql | Code-gen from GraphQL schemas |
+| fp-jms-integrasjon | Legacy JMS messaging |
 
 ### Tier 3 — Business rules (SemVer)
 
@@ -44,23 +44,23 @@
 
 ### Tier 5 — Backend apps
 
-| Repo | Role |
-|------|------|
-| fp-soknad | Citizen application backend |
-| fp-mottak | Receive + validate incoming applications |
-| fp-sak | Core case processing (behandling, aksjonspunkt, vedtak) |
-| fp-abakus | Register data aggregation |
-| fp-kalkulus | Benefit calculation service |
-| fptilbake | Tilbakekreving |
-| fp-los | Case queue (oppgavestyring) |
-| fp-formidling | Document generation, correspondence |
-| fp-dokgen | Document template engine |
+| Repo | Role                                                                  |
+|------|-----------------------------------------------------------------------|
+| fp-grunndata | Reference data, open                                           |
+| fp-soknad | Citizen application backend                                           |
+| fp-mottak | Receive + validate incoming applications                              |
+| fp-sak | Core case processing (behandling, aksjonspunkt, vedtak)               |
+| fp-abakus | Register data aggregation                                             |
+| fp-kalkulus | Benefit calculation service                                           |
+| fptilbake | Tilbakekreving                                                        |
+| fp-los | Case queue (oppgavestyring)                                           |
+| fp-formidling | Document generation, correspondence                                   |
+| fp-dokgen | Document template engine                                              |
 | fpoppdrag | Simulation of payment plan changes (balance impact, periods to repay) |
-| fp-risk | Fraud risk scoring |
-| fp-oversikt | Citizen case status view |
-| fp-inntektsmelding | Employer income reporting backend |
-| fp-inntektsmelding-api | ERP integration API |
-| fp-tilgang | Access control service |
+| fp-oversikt | Citizen case status view                                              |
+| fp-inntektsmelding | Employer income reporting backend                                     |
+| fp-inntektsmelding-api | ERP integration API                                                   |
+| fp-tilgang | Access control service                                                |
 
 ### Tier 6 — Testing
 
@@ -71,13 +71,12 @@
 
 ### Unicorns (outside standard stack)
 
-| Repo | Stack | Note |
-|------|-------|------|
-| fp-ws-proxy | Spring Boot | SOAP/WS proxy to legacy |
+| Repo | Stack                | Note |
+|------|----------------------|------|
+| fp-ws-proxy | Spring Boot          | SOAP/WS proxy to legacy |
 | fp-infotrygd | Kotlin + Spring Boot | Legacy Infotrygd integration |
-| fp-swagger | — | API documentation utility |
-| fp-grunndata | — | Reference data |
-| fp-jms-integrasjon | — | Legacy JMS messaging |
+| fp-swagger | Typescript + Node    | API documentation utility |
+
 
 ## Data flow
 
@@ -95,7 +94,7 @@ Citizen → foreldrepengesoknad → fp-mottak → fp-sak
 OS (Oppdragssystemet, external) → kravgrunnlag over JMS → fptilbake (recovery)
 fp-sak (revurdering) → fpoppdrag (simulate balance impact) → varsel → fptilbake (early start)
 
-Side: fp-los (queue), fp-risk (scoring), fp-oversikt (status view)
+Side: fp-los (queue), fp-oversikt (citizen-facing status view)
 ```
 
 ## Deployment

@@ -24,7 +24,7 @@ Update README.md index when adding a file.
 ## Verifying changes
 
 - No build/test pipeline — markdown only
-- After merge, the TeamForeldrepenger Copilot Space auto-syncs from main
+- After merge, the TeamForeldrepenger Copilot Space auto-syncs from master
 - Validate by asking Copilot a question that should use the updated content
 
 ## Out of scope

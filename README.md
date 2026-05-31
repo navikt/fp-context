@@ -6,12 +6,15 @@ Provides shared grounding for AI assistants across 40+ repos. Attached to the
 [TeamForeldrepenger Copilot Space](https://github.com/copilot/spaces/navikt/15)
 and referenced from each repo's `.github/copilot-instructions.md`.
 
+The domain covers Nav benefits from Folketrygdloven chapter 14: foreldrepenger, engangsstønad, svangerskapspenger.
+
 ## Index
 
 | Path | Topic |
 |------|-------|
 | [domain/business-context.md](domain/business-context.md) | Folketrygdloven kap. 14, value chain, key concepts |
 | [domain/glossary.md](domain/glossary.md) | Norwegian domain terms → code concepts |
+| [domain/planning-heuristics.md](domain/planning-heuristics.md) | Citizen-facing planning guidance: barnehage timing, dekningsgrad, employer coordination, related benefits and services |
 | [architecture/system-overview.md](architecture/system-overview.md) | Repos by tier, data flow, deployment |
 | [architecture/backend-stack.md](architecture/backend-stack.md) | Jetty, Jersey, Weld, Hibernate, Jackson |
 | [architecture/frontend-stack.md](architecture/frontend-stack.md) | React, Aksel, React Hook Form, TanStack |

@@ -8,8 +8,8 @@ document does not pin numbers.
 
 | What | Where |
 |------|-------|
-| Authoritative version pins | [`fp-bom/fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/main/fp-bom/pom.xml) and [`fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/main/pom.xml) |
-| fp-bom scope, conventions, what's in/out | [`fp-bom/.github/copilot-instructions.md`](https://github.com/navikt/fp-bom/blob/main/.github/copilot-instructions.md) |
+| Authoritative version pins | [`fp-bom/fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/master/fp-bom/pom.xml) and [`fp-bom/pom.xml`](https://github.com/navikt/fp-bom/blob/main/pom.xml) |
+| fp-bom scope, conventions, what's in/out | [`fp-bom/.github/copilot-instructions.md`](https://github.com/navikt/fp-bom/blob/master/.github/copilot-instructions.md) |
 | Consumer view (which library to use from where) | [`architecture/team-libraries.md`](../architecture/team-libraries.md) |
 | GitHub Actions pinning policy | [`operations/ci-cd.md`](ci-cd.md#workflow-pinning--ratchet-policy) |
 
@@ -39,7 +39,7 @@ in downstream repos.
 
 ## Update protocol
 
-1. Change in library repo, PR + merge to main
+1. Change in library repo, PR + merge to master
 2. SNAPSHOT updates auto-flow to downstream
 3. For SemVer libraries: release, then update consumer `pom.xml`
 4. Verify downstream CI is green before broad rollout

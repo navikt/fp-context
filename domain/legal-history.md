@@ -1,0 +1,27 @@
+# Legal history — Foreldrepenger, Svangerskapspenger, Engangsstønad
+
+Curated domain history, not legal advice. Verify current rules against Nav/Lovdata/regjeringen.no.
+ 
+## Significant recent legal changes affecting parental benefits
+
+The foreldrepenger system (fp-sak, vedtaksløsning foreldrepenger) started operation 2019-01-01 supporting Folketrygdloven as it stood then. This summary includes changes introduced just before and after this date. Changes from 2019-07-01 onwards are reflected in the code - supporting versions of the rule sets based on introduction mechanism - usually birth dates.
+
+| Effective date | Change                                                                             | Why it matters for LLMs and code agents                               | Legal source                                                             | Background                                                                                         |                                                                                                                                                       
+|----------------|------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 2018-07-01     | innfasing av tredeling av foreldrepenger mv.                                       | Explains current quota structure and number of days (system baseline) | [LOV-2018-06-15-33](https://lovdata.no/dokument/LTI/lov/2018-06-15-33)   | [Prop. 74 L (2017–2018)](https://www.regjeringen.no/no/dokumenter/prop.-74-l-20172018/id2596487)   |
+| 2019-01-01     | endret fastsetting av grunnlaget for sykepenger, foreldrepenger og pleiepenger mv. | Explains calculation concepts, use of A-ordningen (system baseline)   | [LOV-2017-04-05-15](https://lovdata.no/dokument/LTI/lov/2017-04-05-15)   | [Prop. 37 L (2016–2017)](https://www.regjeringen.no/no/dokumenter/prop.-37-l-20162017/id2523219)   |
+| 2019-01-01     | forenklinger i foreldrepengeordningen                                              | Explains current structure of chapter 14 (system baseline)            | [LOV-2017-12-19-116](https://lovdata.no/dokument/LTI/lov/2017-12-19-116) | [Prop. 168 L (2016–2017)](https://www.regjeringen.no/no/dokumenter/prop.-168-l-20162017/id2568603) |
+| 2019-01-01     | tredeling av foreldrepengeperioden ved 80 prosent uttak                            | Explains initial balancing of 80 % fellesperiode (system baseline)    | [LOV-2018-12-07-90](https://lovdata.no/dokument/LTI/lov/2018-12-07-90)   | [Prop. 4 L (2018–2019)](https://www.regjeringen.no/no/dokumenter/prop.-4-l-20182019/id2614182)     |
+| 2019-07-01     | foreldrepenger ved premature fødsler mv.                                           | Extra days for children born more than 7 weeks before due date        | [LOV-2019-06-21-28](https://lovdata.no/dokument/LTI/lov/2019-06-21-28)   | [Prop. 73 L (2018–2019)](https://www.regjeringen.no/no/dokumenter/prop.-73-l-20182019/id2639490)   |
+| 2021-10-01     | fri utsettelse / fritt uttak av foreldrepenger                                                   | No need to specify reason for utsettelse after week 6                 | [LOV-2021-06-11-61](https://lovdata.no/dokument/LTI/lov/2021-06-11-61)   | [Prop. 127 L (2020–2021)](https://www.regjeringen.no/no/dokumenter/prop.-127-l-20202021/id2841691) |
+| 2022-08-02     | minsterett 1 - styrking av fedres rett til foreldrepenger mv.                      | Affects minimum entitlement guidance and planning                     | [LOV-2022-03-18-11](https://lovdata.no/dokument/LTI/lov/2022-03-18-11)   | [Prop. 15 L (2021–2022)](https://www.regjeringen.no/no/dokumenter/prop.-15-l-20212022/id2888219)   |
+| 2024-07-01     | forlengelse av foreldrepengeperioden ved 80 prosent dekning                        | Important for dekningsgrad comparisons and planning heuristics        | [LOV-2024-05-14-21](https://lovdata.no/dokument/LTI/lov/2024-05-14-21)   | [Prop. 43 L (2023–2024)](https://www.regjeringen.no/no/dokumenter/prop.-43-l-20232024/id3022755)   |
+| 2024-08-02     | minsterett 2 styrking av fedres rett til foreldrepenger                            | Current-rule correction to the 2022 change                            | [LOV-2024-06-25-59](https://lovdata.no/dokument/LTI/lov/2024-06-25-59)   | [Prop. 85 LS (2023–2024)](https://www.regjeringen.no/no/dokumenter/prop.-85-ls-20232024/id3032242) |
+| 2024-10-01     | engangsstønad medlemskap                                                           | Relevant for explaining FP vs ES eligibility/choice boundaries        | [LOV-2024-06-25-54](https://lovdata.no/dokument/LTI/lov/2024-06-25-54)   | [Prop. 101 L (2023–2024)](https://www.regjeringen.no/no/dokumenter/prop.-101-l-20232024/id3037628) |
+
+## fp-sak concepts differentiation versions
+
+* `kreverSammenhengendeUttak` (pre-2021-10-01): need documented utsettelse and opphold throughout 
+* `utenMinsterett` (pre-2022-08-02): minimum entitlement for "Bare far rett", chapter 14 does not apply
+* `ikkeBotidskrav` (pre-2024-10-01): engangsstønad eligibility requires membership at the due date (not 12 months before)
+* Other rule-set selections are usually based on familiehendelse/fødselsdato/adoption date
