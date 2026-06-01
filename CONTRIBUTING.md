@@ -1,7 +1,7 @@
 # Contributing to fp-context
 
-Primary audience: **AI assistants**. Humans maintain, AI consumes.
-Optimize for token-efficiency, retrievability, and factual density.
+Audience: **AI assistants and experienced developers** — keep short and precise.
+Optimize for token efficiency, retrievability, and factual density.
 
 ## Length budgets
 
@@ -12,38 +12,33 @@ Optimize for token-efficiency, retrievability, and factual density.
 | Domain explainers | ≤120 lines | 180 lines |
 | Per-repo summaries (if added) | ≤40 lines | 60 lines |
 
-If a topic needs more length, **split it** into multiple focused files.
+Split rather than grow.
 
-## Format hierarchy
+## Format & style
 
-Prefer formats higher on this list:
+Format — minimize tokens while preserving meaning:
+- **Bullets** — key→value pairs, simple enumerations, discrete facts, ≤~6 items
+- **Tables** — multi-column data, or lists longer than 6 items
+- **Code blocks** — commands and code only
+- **Headers** — retrieval anchors; skip for single-item sections
+- **Prose** — only when structure would obscure meaning
 
-1. **Tables** — highest density, machine-parseable
-2. **Bullet lists** — discrete facts
-3. **Code blocks** — for commands and code patterns only
-4. **Headers** — for retrieval anchors
-5. **Prose** — only when nothing else fits
-
-## Style rules
-
-- **No prose intros** — start with content, skip "This document describes..."
-- **No connectives** — drop "Note that", "It is important to", "As mentioned"
-- **Link, don't quote** — reference Folketrygdloven, Nav docs, Aksel docs by URL
-- **One topic per file** — small files compose better in retrieval
-- **Examples minimal** — one clear example > three illustrative
-- **Norwegian for domain terms, English for technical** — match the codebase
-- **No marketing prose** — skip "this important repository handles..."
+Style:
+- Start with content — no "This document describes..."
+- No connectives: drop "Note that", "It is important to"
+- Link, don't quote — Folketrygdloven, Nav docs, Aksel docs by URL
+- One topic per file — small files compose better in retrieval
+- One example max where needed
+- Norwegian for domain terms, English for technical — match the codebase
 
 ## File organization
 
-| Directory | Content |
-|-----------|---------|
-| `domain/` | Business rules, legal context, terminology |
-| `architecture/` | System structure, tech stack, integration patterns |
-| `conventions/` | Code style, workflow, testing approach |
-| `operations/` | CI/CD, deployment, dependency management |
+- `domain/` — Business rules, legal context, terminology
+- `architecture/` — System structure, tech stack, integration patterns
+- `conventions/` — Code style, workflow, testing approach
+- `operations/` — CI/CD, deployment, dependency management
 
-Update README.md index when adding a new file.
+Update README.md and llms.txt index when adding a file.
 
 ## Out of scope
 
@@ -58,20 +53,13 @@ Update README.md index when adding a new file.
 
 ## Workflow
 
-Standard team flow:
-1. Branch from `master`
-2. Edit (within budgets)
-3. PR with description of what and why
-4. One reviewer
-5. Squash-merge
-
-After merge, the TeamForeldrepenger Copilot Space auto-syncs.
+Branch → edit (within budget) → PR (1 reviewer) → squash-merge. Space auto-syncs after merge.
 
 ## Review checklist
 
 - [ ] Within length budget
-- [ ] Tables/bullets used where possible (prose minimized)
+- [ ] Tables/bullets used where possible (prose minimized) and matching content type per rules above
 - [ ] No duplication of existing content
-- [ ] External authoritative sources linked, not embedded
+- [ ] External sources linked, not embedded
 - [ ] Norwegian/English usage consistent with codebase
 - [ ] README.md index updated if file added
