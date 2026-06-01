@@ -44,23 +44,23 @@
 
 ### Tier 5 — Backend apps
 
-| Repo | Role                                                                  |
-|------|-----------------------------------------------------------------------|
-| fp-grunndata | Reference data, open                                           |
-| fp-soknad | Citizen application backend                                           |
-| fp-mottak | Receive + validate incoming applications                              |
-| fp-sak | Core case processing (behandling, aksjonspunkt, vedtak)               |
-| fp-abakus | Register data aggregation                                             |
-| fp-kalkulus | Benefit calculation service                                           |
-| fptilbake | Tilbakekreving                                                        |
-| fp-los | Case queue (oppgavestyring)                                           |
-| fp-formidling | Document generation, correspondence                                   |
-| fp-dokgen | Document template engine                                              |
-| fpoppdrag | Simulation of payment plan changes (balance impact, periods to repay) |
-| fp-oversikt | Citizen case status view                                              |
-| fp-inntektsmelding | Employer income reporting backend                                     |
-| fp-inntektsmelding-api | ERP integration API                                                   |
-| fp-tilgang | Access control service                                                |
+| Repo | Role                                                                                                    |
+|------|---------------------------------------------------------------------------------------------------------|
+| fp-grunndata | Reference data, open                                                                                    |
+| fp-soknad | Citizen application backend                                                                             |
+| fp-mottak | Route incoming documents and events to a fagsak, and sent to fp-sak                                     |
+| fp-sak | Core case processing (behandling, aksjonspunkt, vedtak)                                                 |
+| fp-abakus | Income-related data aggregation (application and register). History of vedtak: benefit, periods, payout |
+| fp-kalkulus | Benefit calculation service                                                                             |
+| fptilbake | Tilbakekreving                                                                                          |
+| fp-los | Case queue (oppgavestyring)                                                                             |
+| fp-formidling | Document generation, outgoing correspondence                                                            |
+| fp-dokgen | Document template engine                                                                                |
+| fpoppdrag | Simulation of payment plan changes (balance impact, periods to repay)                                   |
+| fp-oversikt | Citizen case status view                                                                                |
+| fp-inntektsmelding | Employer income reporting backend                                                                       |
+| fp-inntektsmelding-api | ERP integration API                                                                                     |
+| fp-tilgang | Access control service                                                                                  |
 
 ### Tier 6 — Testing
 
