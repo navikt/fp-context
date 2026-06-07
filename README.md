@@ -18,10 +18,12 @@ The domain covers Nav benefits from Folketrygdloven chapter 14: foreldrepenger, 
 | [domain/planning-heuristics.md](domain/planning-heuristics.md) | Citizen-facing planning guidance: barnehage timing, dekningsgrad, employer coordination, related benefits and services |
 | [architecture/system-overview.md](architecture/system-overview.md) | Repos by tier, data flow, deployment |
 | [architecture/backend-stack.md](architecture/backend-stack.md) | Jetty, Jersey, Weld, Hibernate, Jackson |
+| [architecture/backend-auth.md](architecture/backend-auth.md) | Authentication and authorization |
 | [architecture/frontend-stack.md](architecture/frontend-stack.md) | React, Aksel, React Hook Form, TanStack |
 | [conventions/java-codestyle.md](conventions/java-codestyle.md) | Functional, fluent, Java 25+ |
 | [conventions/workflow.md](conventions/workflow.md) | Trunk-based development, PRs, CI/CD |
 | [conventions/testing.md](conventions/testing.md) | Unit (per repo) + integration (fp-autotest) |
+| [conventions/copilot-instructions-template.md](conventions/copilot-instructions-template.md) | Template for spoke repo `.github/copilot-instructions.md` |
 | [operations/ci-cd.md](operations/ci-cd.md) | fp-gha-workflows, SonarCloud, NAIS |
 | [operations/dependency-management.md](operations/dependency-management.md) | fp-bom, Dependabot |
 

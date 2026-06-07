@@ -15,6 +15,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 
 - [System Overview](architecture/system-overview.md): Repository tier classification, data flow diagrams, and NAIS runtime deployment mapping.
 - [Backend Stack](architecture/backend-stack.md): Specifications for Java ecosystem architecture including Jetty, Jersey, Weld, Hibernate, and Jackson.
+- [Backend Auth](architecture/backend-auth.md): Incoming request authentication and authorization.
 - [Frontend Stack](architecture/frontend-stack.md): Framework rules for React, Aksel design system, React Hook Form, and TanStack.
 
 ## Code Conventions & Workflows
@@ -22,6 +23,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 - [Java Codestyle](conventions/java-codestyle.md): Functional and fluent paradigms for Java 25+ compilation targets.
 - [Engineering Workflow](conventions/workflow.md): Trunk-based development protocols, Pull Request standards, and CI/CD validation gates.
 - [Testing Mechanisms](conventions/testing.md): Execution layout splitting unit tests (per repo) from integration setups (fp-autotest).
+- [Copilot Instructions Template](conventions/copilot-instructions-template.md): Template and conventions for spoke repo `.github/copilot-instructions.md` files.
 
 ## Operations & Infrastructure
 

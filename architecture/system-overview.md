@@ -86,10 +86,10 @@ Citizen → foreldrepengesoknad → fp-mottak → fp-sak
                                               ├─ fp-inngangsvilkar (eligibility)
                                               ├─ fp-kalkulus (calc)
                                               └─ fp-uttak (allocation)
-                                                  ↓
-                                              Vedtak
+                                              └─ Vedtak
                                                   ├─ oppdrag → OS (external) over JMS, kvittering on return queue
                                                   └─ fp-formidling (letters)
+                                                  └─ data warehouse (statistics, BI)
 
 OS (Oppdragssystemet, external) → kravgrunnlag over JMS → fptilbake (recovery)
 fp-sak (revurdering) → fpoppdrag (simulate balance impact) → varsel → fptilbake (early start)

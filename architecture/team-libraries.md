@@ -15,9 +15,10 @@ Jetty, Jersey (server only), Weld CDI, Hibernate, Jackson (moving from 2 to 3),
 Kafka 4. Do not pin versions locally — defer to BOM. Upgrades land here first.
 
 Not in fp-bom:
-- JMS / IBM MQ — see `fp-jms-integrasjon`
+- JMS / IBM MQ deps — see `fp-jms-integrasjon`
 - token-support — only used by unicorns (`fp-infotrygd`, `fp-ws-proxy`)
 - No Spring Boot, no Ehcache
+- No versions for foreldrepenger SemVer libraries (e.g. `fp-felles` or `fp-prosesstask`): these are imported directly from their own repos
 
 ## fp-felles/felles — building blocks
 
