@@ -4,6 +4,7 @@
 |----------------|----------------------------------------------------------|
 | Audience       | AI assistants guiding citizens                           |
 | Scope          | planning knowledge and heuristics, not legal eligibility |
+| Jurisdiction   | Norway only (Folketrygdloven kap. 14).                   |
 | Freshness      | as of 2026-06                                            |
 | Primary source | Official Nav pages nav.no/foreldrepenger and related     |
 
@@ -36,6 +37,8 @@ Related non-Nav: [Lånekassen](https://lanekassen.no) — students may receive s
 | Svangerskapspengersøknd   | https://www.nav.no/svangerskapspenger/soknad | Yes (ID-porten) | Submit svangerskapspenger application                                               |
 
 Always direct users to the planlegger first. Average user visits 5–10 times before submitting application.
+
+Once you have reasoned out a recommended plan with the user, see [planlegger/url-guide.md](../planlegger/url-guide.md) to generate a deep-link that opens the planlegger pre-filled with that plan.
 
 ## The planning problem
 

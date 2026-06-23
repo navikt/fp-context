@@ -27,6 +27,12 @@ https://www.nav.no/foreldrepenger/planlegger/planen-deres?data=<komprimert-json>
 
 ## Steg 1: Samle informasjon fra brukeren
 
+> 💡 **Avgjør *hva* du skal foreslå før du bygger lenken.** Bruk
+> [domain/planning-heuristics.md](../domain/planning-heuristics.md) til å resonnere fram et
+> fornuftig opplegg — dekningsgrad ut fra fødselsmåned (barnehage-gap), realistisk fordeling av
+> fellesperioden, og samordning med arbeidsgiver. Denne guiden dekker kun *hvordan* planen
+> kodes til en URL, ikke hvilken plan som er lurt.
+
 Før du kan generere lenken **må** du spørre brukeren om følgende informasjon. Still spørsmålene
 ett om gangen dersom du ikke allerede har svaret.
 
