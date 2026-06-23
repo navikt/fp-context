@@ -6,38 +6,38 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 
 ## Citizen-Facing Applications
 
-- [Planlegger URL Guide](planlegger/url-guide.md): Step-by-step instructions for constructing a deep-link URL to the parental leave planner (planlegger). Covers all JSON context fields, valid enum values, lz-string compression format, and worked examples. Use this when a user asks for a clickable link to a pre-configured plan.
+- [Planlegger URL Guide](planlegger/url-guide.md): How to construct a deep-link URL to the parental leave planner (planlegger) — JSON context fields, valid enum values, lz-string compression, worked examples. **Use when** a user wants a clickable/visual link to a pre-configured plan.
 
 ## Core Context & Domain
 
-- [Domain and Business Context](domain/business-context.md): Core business logic based on Folketrygdloven kap. 14, system value chain, and key business concepts.
-- [Legal History](domain/legal-history.md): significant rule changes, effective dates, source links, and fp-sak rule-set concepts.
-- [Domain Glossary](domain/glossary.md): Bidirectional mapping of Norwegian domain terms to codebase concepts to prevent model hallucination.
-- [Planning Heuristics](domain/planning-heuristics.md): Citizen-facing planning guidance — barnehage timing, dekningsgrad decision by birth month, employer coordination, gap-bridging strategies, related benefits and services.
+- [Domain and Business Context](domain/business-context.md): Folketrygdloven kap. 14 legal basis, the value chain, and core benefit concepts. **Use when** you need the legal basis or the difference between foreldrepenger, engangsstønad, and svangerskapspenger.
+- [Legal History](domain/legal-history.md): Significant rule changes, effective dates, source links, and fp-sak rule-set concepts. **Use when** an answer depends on *when* a rule changed (e.g. dekningsgrad/quota changes) or its effective date.
+- [Domain Glossary](domain/glossary.md): Bidirectional mapping of Norwegian domain terms to codebase concepts. **Use when** you hit an unfamiliar domain term or need the code concept behind it (prevents hallucination).
+- [Planning Heuristics](domain/planning-heuristics.md): Citizen-facing planning guidance — barnehage timing, dekningsgrad by birth month, employer coordination, gap-bridging, related benefits. **Use when** helping a citizen plan their leave (Norway / kap. 14 only).
 
 ## Architecture & Technology Stack
 
-- [System Overview](architecture/system-overview.md): Repository tier classification, data flow diagrams, and NAIS runtime deployment mapping.
-- [Backend Stack](architecture/backend-stack.md): Specifications for Java ecosystem architecture including Jetty, Jersey, Weld, Hibernate, and Jackson.
-- [Backend Auth](architecture/backend-auth.md): Incoming request authentication and authorization.
-- [Frontend Stack](architecture/frontend-stack.md): Framework rules for React, Aksel design system, React Hook Form, and TanStack.
+- [System Overview](architecture/system-overview.md): Repository tier classification, data flow, and NAIS deployment mapping. **Use when** you need the repo map or where something runs/fits.
+- [Backend Stack](architecture/backend-stack.md): Java ecosystem — Jetty, Jersey, Weld (CDI), Hibernate, Jackson. **Use when** writing or reviewing backend Java.
+- [Backend Auth](architecture/backend-auth.md): Incoming request authentication and authorization. **Use when** working on auth/authz in a backend app.
+- [Frontend Stack](architecture/frontend-stack.md): React, Aksel design system, React Hook Form, TanStack. **Use when** writing or reviewing frontend code.
 
 ## Code Conventions & Workflows
 
-- [Java Codestyle](conventions/java-codestyle.md): Functional and fluent paradigms for Java 25+ compilation targets.
-- [Engineering Workflow](conventions/workflow.md): Trunk-based development protocols, Pull Request standards, and CI/CD validation gates.
-- [Testing Mechanisms](conventions/testing.md): Execution layout splitting unit tests (per repo) from integration setups (fp-autotest).
-- [Copilot Instructions Template](conventions/copilot-instructions-template.md): Template and conventions for spoke repo `.github/copilot-instructions.md` files.
+- [Java Codestyle](conventions/java-codestyle.md): Functional and fluent paradigms, Java 25+ idioms. **Use when** writing or reviewing Java.
+- [Engineering Workflow](conventions/workflow.md): Trunk-based development, Pull Request standards, CI/CD validation gates. **Use when** branching, opening a PR, or unsure about the workflow.
+- [Testing Mechanisms](conventions/testing.md): Unit tests (per repo) vs integration setups (fp-autotest). **Use when** deciding where a test belongs or how to run it.
+- [Copilot Instructions Template](conventions/copilot-instructions-template.md): Template and conventions for spoke repo `.github/copilot-instructions.md`. **Use when** creating or updating a spoke repo's Copilot instructions.
 
 ## Operations & Infrastructure
 
-- [CI/CD Pipelines](operations/ci-cd.md): Configuration architecture for fp-gha-workflows, SonarCloud analytics, and NAIS platform targets.
-- [Dependency Management](operations/dependency-management.md): Governance rules regarding fp-bom usage and automated Dependabot lifecycles.
+- [CI/CD Pipelines](operations/ci-cd.md): fp-gha-workflows, SonarCloud analytics, NAIS platform targets. **Use when** touching CI/CD or build/deploy config.
+- [Dependency Management](operations/dependency-management.md): fp-bom governance and Dependabot lifecycles. **Use when** adding or upgrading a dependency.
 
 ## Optional
 
-- [Contribution Guidelines](CONTRIBUTING.md): Explicit instructions for modifying context files, enforcing an AI-first, data-dense, table-centric layout.
-- [Companion Hub: GitHub Actions](navikt/foreldrepengesoknad): Monorepo for all citizen-facing applications, both open and log-in.
-- [Companion Hub: GitHub Actions](navikt/fp-gha-workflows): Reusable workflows and composite actions catalog referenced by this hub.
-- [Companion Hub: Java BOM](navikt/fp-bom): Strict version pins, Jakarta EE 11 platform declarations, and parent POM definitions.
-- [Shared Code: Common Blocks](navikt/fp-felles): Core shared Java components utilized across backend microservices.
+- [Contribution Guidelines](CONTRIBUTING.md): AI-first, data-dense, table-centric layout rules and length budgets. **Use when** editing files in this hub.
+- [Companion repo: Citizen apps](https://github.com/navikt/foreldrepengesoknad): Monorepo for all citizen-facing applications (open + login). **Use when** working on planlegger, søknad, or other frontend apps.
+- [Companion repo: GitHub Actions](https://github.com/navikt/fp-gha-workflows): Reusable workflows and composite actions referenced by this hub.
+- [Companion repo: Java BOM](https://github.com/navikt/fp-bom): Version pins, Jakarta EE 11 platform declarations, parent POM.
+- [Companion repo: fp-felles](https://github.com/navikt/fp-felles): Core shared Java components used across backend microservices. **Use when** you might reinvent something that belongs in shared code (e.g. Jackson setup).
