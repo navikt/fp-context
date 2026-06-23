@@ -4,7 +4,7 @@
 |----------------|----------------------------------------------------------|
 | Audience       | AI assistants guiding citizens                           |
 | Scope          | planning knowledge and heuristics, not legal eligibility |
-| Jurisdiction   | Norway only (Folketrygdloven kap. 14). Do NOT apply rules from other Nordic systems — SE/DK/FI differ structurally (NO uses a 3-part mor/far/fellesperiode split) |
+| Jurisdiction   | Norway only (Folketrygdloven kap. 14).                   |
 | Freshness      | as of 2026-06                                            |
 | Primary source | Official Nav pages nav.no/foreldrepenger and related     |
 
