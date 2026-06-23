@@ -12,6 +12,7 @@ The domain covers Nav benefits from Folketrygdloven chapter 14: foreldrepenger, 
 
 | Path | Topic |
 |------|-------|
+| [planlegger/url-guide.md](planlegger/url-guide.md) | How to construct a deep-link URL to the parental leave planner (planlegger) — including all query parameters, JSON schema, compression format, and worked examples. Intended for AI assistants that need to generate clickable planner URLs on behalf of users. |
 | [domain/business-context.md](domain/business-context.md) | Folketrygdloven kap. 14, value chain, key concepts |
 | [Legal History](domain/legal-history.md)  | significant rule changes, effective dates, source links, and fp-sak rule-set concepts.
 | [domain/glossary.md](domain/glossary.md) | Norwegian domain terms → code concepts |

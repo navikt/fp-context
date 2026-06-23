@@ -4,6 +4,10 @@
 
 This hub serves as the primary grounding point for AI assistants, IDE agents, and GitHub Copilot spaces operating within Team Foreldrepenger (@navikt/teamforeldrepenger). It translates Norwegian legal frameworks (Folketrygdloven Kap. 14) into software architectural concepts and dictates standards for the application stack.
 
+## Citizen-Facing Applications
+
+- [Planlegger URL Guide](planlegger/url-guide.md): Step-by-step instructions for constructing a deep-link URL to the parental leave planner (planlegger). Covers all JSON context fields, valid enum values, lz-string compression format, and worked examples. Use this when a user asks for a clickable link to a pre-configured plan.
+
 ## Core Context & Domain
 
 - [Domain and Business Context](domain/business-context.md): Core business logic based on Folketrygdloven kap. 14, system value chain, and key business concepts.
