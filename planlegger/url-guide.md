@@ -12,6 +12,12 @@ som brukeren kan tilpasse videre.
 Planleggeren leser tilstandsdata fra en `data`-query-parameter i URL-en. Verdien er en
 lz-komprimert (lz-string `compressToEncodedURIComponent`) JSON-streng.
 
+> ⚠️ **Du MÅ kjøre kode for å lage `data`-verdien.** lz-string-komprimering kan ikke
+> regnes ut «i hodet» av en språkmodell. Bruk kodesnutten i Steg 3 (JS eller Python) til å
+> produsere strengen. **Aldri** skriv eller gjett den komprimerte strengen manuelt — da blir
+> URL-en korrupt. Har du ikke kjøre-kode-verktøy tilgjengelig: forklar brukeren stegene i
+> stedet for å oppgi en oppdiktet lenke.
+
 **Basis-URL:**
 ```
 https://www.nav.no/foreldrepenger/planlegger/planen-deres?data=<komprimert-json>
@@ -209,6 +215,18 @@ lz = lzstring.LZString()
 compressed = lz.compressToEncodedURIComponent(json.dumps(data, ensure_ascii=False))
 url = f"https://www.nav.no/foreldrepenger/planlegger/planen-deres?data={compressed}"
 ```
+
+> Python: `pip install lzstring` er en tredjeparts-reimplementasjon. Verifiser at output er
+> kompatibel med JS-`lz-string` (se selvsjekken under) før du stoler på den.
+
+### Steg 4: Selvsjekk før du gir lenken til brukeren
+
+Dekomprimer din egen `data`-verdi og kontroller at den `JSON.parse`-er til nøyaktig objektet du
+bygde (lz-string `decompressFromEncodedURIComponent` → `JSON.parse`). Stemmer ikke round-trip,
+er lenken ugyldig — ikke send den.
+
+> Kun nøklene i denne guiden er nødvendige. `HVOR_MYE` og `UTTAKSPLAN` finnes i appen, men er
+> avledet/valgfrie og skal **utelates** — ikke forsøk å konstruere dem.
 
 ---
 
