@@ -14,13 +14,14 @@ The domain covers Nav benefits from Folketrygdloven chapter 14: foreldrepenger, 
 |------|-------|
 | [planlegger/url-guide.md](planlegger/url-guide.md) | How to construct a deep-link URL to the parental leave planner (planlegger) — including all query parameters, JSON schema, compression format, and worked examples. Intended for AI assistants that need to generate clickable planner URLs on behalf of users. |
 | [domain/business-context.md](domain/business-context.md) | Folketrygdloven kap. 14, value chain, key concepts |
-| [Legal History](domain/legal-history.md)  | significant rule changes, effective dates, source links, and fp-sak rule-set concepts.
+| [Legal History](domain/legal-history.md)  | significant rule changes, effective dates, source links, and fp-sak rule-set concepts. |
 | [domain/glossary.md](domain/glossary.md) | Norwegian domain terms → code concepts |
 | [domain/planning-heuristics.md](domain/planning-heuristics.md) | Citizen-facing planning guidance: barnehage timing, dekningsgrad, employer coordination, related benefits and services |
 | [architecture/system-overview.md](architecture/system-overview.md) | Repos by tier, data flow, deployment |
 | [architecture/backend-stack.md](architecture/backend-stack.md) | Jetty, Jersey, Weld, Hibernate, Jackson |
 | [architecture/backend-auth.md](architecture/backend-auth.md) | Authentication and authorization |
 | [architecture/frontend-stack.md](architecture/frontend-stack.md) | React, Aksel, React Hook Form, TanStack |
+| [architecture/team-libraries.md](architecture/team-libraries.md) | Shared team libraries |
 | [conventions/java-codestyle.md](conventions/java-codestyle.md) | Functional, fluent, Java 25+ |
 | [conventions/workflow.md](conventions/workflow.md) | Trunk-based development, PRs, CI/CD |
 | [conventions/testing.md](conventions/testing.md) | Unit (per repo) + integration (fp-autotest) |

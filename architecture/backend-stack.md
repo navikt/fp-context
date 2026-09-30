@@ -20,7 +20,7 @@
 
 | Concern | Pattern |
 |---------|---------|
-| REST endpoints | Jersey resource + DTO + `@BeskyttetRessurs` on every endpoint |
+| REST endpoints | Jersey resource + DTO + `@BeskyttetRessurs` on endpoints |
 | Database | JPA entity + base class from fp-felles + Flyway migration |
 | Async work | `ProsessTaskHandler` — never raw threads/executors |
 | External REST | Java HttpClient configured via fp-felles |

@@ -46,7 +46,7 @@ in downstream repos.
 
 ## Strategy
 
-- `fp-bom` is the single source of truth — never pin a version locally
+- `fp-bom` is the single source of truth for the platform — avoid pinning a version locally
 - Stay current — Dependabot sets the cadence
 - Don't hold back upgrades without a documented reason
 - Use Java preview features selectively, when value is clear

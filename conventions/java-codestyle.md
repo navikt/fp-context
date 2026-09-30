@@ -1,6 +1,6 @@
 # Java Code Style
 
-Java 25+. Functional, fluent, immutable-by-default.
+Java 25+. Prefer locally understandable code with explicit domain meaning. Use functional, fluent, and inference-based constructs when they improve that readability.
 
 ## Functional style
 
@@ -56,7 +56,7 @@ var total = perioder.stream().mapToInt(Periode::getTrekkdager).sum();
 | `sealed` interface/class | Restricted type hierarchies |
 | Pattern matching | Switch over sealed types |
 | Text blocks | Multi-line SQL, JSON, templates |
-| `var` | Local variables with obvious types |
+| `var` | Local variables with obvious types. Avoid for service/api calls. |
 
 ## Naming
 

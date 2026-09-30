@@ -35,12 +35,12 @@
 
 ### Tier 4 — Frontend
 
-| Repo | Role | Build |
-|------|------|-------|
-| foreldrepengesoknad | Citizen application form | Yarn + Turbo |
-| fp-frontend | Case worker UI | pnpm + Turbo |
-| fp-inntektsmelding-frontend | Employer income reporting | — |
-| ft-frontend-saksbehandling | Shared case worker frontend | — |
+| Repo | Role |
+|------|------|
+| foreldrepengesoknad | Citizen application form |
+| fp-frontend | Case worker UI |
+| fp-inntektsmelding-frontend | Employer income reporting |
+| ft-frontend-saksbehandling | Shared case worker frontend |
 
 ### Tier 5 — Backend apps
 
