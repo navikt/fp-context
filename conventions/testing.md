@@ -44,4 +44,6 @@ mvn test -P <suite> -Dtest="<Class>#<method>"    # single method
 - `@DisplayName` (Norwegian for domain tests)
 - AssertJ fluent assertions: `assertThat(x).isEqualTo(y)`
 - Mockito with constructor injection over field injection
+- No `mockStatic`- use static set/remove for e.g. `KontekstHolder` or ask for approach
+- Avoid `Environment` - specific tests. Target production, then VTP.
 - Records or builders for test data
