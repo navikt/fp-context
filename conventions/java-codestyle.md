@@ -4,7 +4,7 @@ Java 25+. Prefer locally understandable code with explicit domain meaning. Use f
 
 ## Principles and Guidelines
 
-- Write code for consumption by models and experienced developers. Linear readability over cleverness
+- Write code for effective consumption by models and experienced developers. Linear readability over cleverness
 - Prefer explicit types. Use inference-based constructs only when the type is obvious from the statement
 - Code-sharing through delegation and composition, not inheritance
 - Prefer records where appropriate, especially for DTOs and value types
@@ -17,6 +17,8 @@ Java 25+. Prefer locally understandable code with explicit domain meaning. Use f
 - Anti-corruption layer for consuming external systems: map responses to internal domain types and be aware of external change dynamics
 - Separate contracts for external consumers from internal domain types. Avoid exposing internal types to external consumers
 - Use fp-kontrakter for external contracts and multi-producer fp-internal contracts. Single producer fp-internal contracts in the producing repo
+- Use `fp-parent-lib` for shared libraries and `fp-parent-app` for apps.
+- Use multiple modules only for large or wide repos with distinct subdomains.
 
 ## Readability
 
