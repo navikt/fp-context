@@ -192,6 +192,7 @@ public class Fagsak {
 
 ## Comments
 
-- Don't comment what — make code readable
+- Don't comment the obvious — make code readable. May mention the overall role of a class or method, or the intent of a block of code.
+- Be sober about your current context and avoid escalating clarifications into major points worth a comment. 
 - Comment why for non-obvious decisions (legal requirements, workarounds)
 - Javadoc on public APIs of shared libraries
