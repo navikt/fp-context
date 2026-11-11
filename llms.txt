@@ -24,7 +24,7 @@ This hub serves as the primary grounding point for AI assistants, IDE agents, an
 
 ## Code Conventions & Workflows
 
-- [Java Codestyle](conventions/java-codestyle.md): Functional and fluent paradigms, Java 25+ idioms. **Use when** writing or reviewing Java.
+- [Java Codestyle](conventions/java-codestyle.md): Principles, guidelines, and idioms for Java code. **Use when** writing or reviewing Java.
 - [Engineering Workflow](conventions/workflow.md): Trunk-based development, Pull Request standards, CI/CD validation gates. **Use when** branching, opening a PR, or unsure about the workflow.
 - [Testing Mechanisms](conventions/testing.md): Unit tests (per repo) vs integration setups (fp-autotest). **Use when** deciding where a test belongs or how to run it.
 - [Copilot Instructions Template](conventions/copilot-instructions-template.md): Template and conventions for spoke repo `.github/copilot-instructions.md`. **Use when** creating or updating a spoke repo's Copilot instructions.

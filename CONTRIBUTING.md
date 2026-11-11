@@ -7,7 +7,7 @@ Optimize for token efficiency, retrievability, and factual density.
 
 | Document type | Target | Hard limit |
 |--------------|--------|------------|
-| Instructions / conventions | ≤100 lines | 150 lines |
+| Instructions / conventions | ≤100 lines | 200 lines |
 | Reference (glossary, repo map) | ≤200 lines | 300 lines |
 | Domain explainers | ≤120 lines | 180 lines |
 | Per-repo summaries (if added) | ≤40 lines | 60 lines |
