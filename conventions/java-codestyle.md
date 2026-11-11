@@ -4,7 +4,7 @@ Java 25+. Prefer locally understandable code with explicit domain meaning. Use f
 
 ## Principles and Guidelines
 
-- Some of these are goals and does not reflect the current code-base - but new or touched code and changes should move the code-base in this direction.
+- Some of these are goals and do not reflect the current code-base - but new or touched code should move the code-base in this direction.
 - Write code for effective consumption by models and experienced developers. Linear readability over cleverness
 - Prefer explicit types. Use inference-based constructs only when the type is obvious from the statement
 - Prefer code-sharing through delegation and composition, not inheritance - unless enforcing policies (like in BaseEntitet)
@@ -31,6 +31,7 @@ Java 25+. Prefer locally understandable code with explicit domain meaning. Use f
 - Align frontend / backend naming and constraints (nullability or slightly different names (requiring a JsonProperty))
 - Remove uncessary Jackson annotations - keep where they make a difference (JsonAlias or properties with different name).
 - Remove Kodeverdi/UDEFINERT: Target required value or make nullable - beware of database constraints and existing data ("-").
+- Explicit typing: Replace var with explicit type where the type is not obvious from the statement. Avoid var for service/api calls.
 
 ## Readability
 
@@ -110,7 +111,7 @@ public record Saksnummer(@JsonValue @NotNull String verdi) {
 @Table(name = "FAGSAK")
 public class Fagsak {
     // Id-attributes and other
-    @NotNull
+    @jakarta.validation.constraints.NotNull // rather import this
     @NaturalId
     @Convert(converter = Saksnummer.SaksnummerConverter.class)
     @Column(name = "saksnummer", nullable = false)
@@ -150,7 +151,6 @@ public enum YtelseType {
         public String convertToDatabaseColumn(YtelseType verdi) {
             return verdi == null ? null : verdi.getKode();
         }
-
         @Override
         public YtelseType convertToEntityAttribute(String verdi) {
             return verdi == null ? null : YtelseType.fraKode(verdi);

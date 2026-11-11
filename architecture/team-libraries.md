@@ -86,9 +86,3 @@ n-ary (Conditional If/Or/Else) expressions.
 Output (JSON) covers both rule specification and evaluation trace — usable
 for legal/regulatory review and long-term storage. AsciiDoc rule docs via
 Doclet.
-
-## Structure
-
-- Separate contracts for external consumers from internal domain types. Avoid exposing internal types to external consumers
-- Use fp-kontrakter for external contracts and multi-producer fp-internal contracts. Single producer fp-internal contracts in the producing repo
-- Use multiple modules only for large or wide repos with distinct subdomains.
