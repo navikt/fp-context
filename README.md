@@ -22,7 +22,7 @@ The domain covers Nav benefits from Folketrygdloven chapter 14: foreldrepenger, 
 | [architecture/backend-auth.md](architecture/backend-auth.md) | Authentication and authorization |
 | [architecture/frontend-stack.md](architecture/frontend-stack.md) | React, Aksel, React Hook Form, TanStack |
 | [architecture/team-libraries.md](architecture/team-libraries.md) | Shared team libraries |
-| [conventions/java-codestyle.md](conventions/java-codestyle.md) | Functional, fluent, Java 25+ |
+| [conventions/java-codestyle.md](conventions/java-codestyle.md) | Principles, guidelines and idioms for Java code|
 | [conventions/workflow.md](conventions/workflow.md) | Trunk-based development, PRs, CI/CD |
 | [conventions/testing.md](conventions/testing.md) | Unit (per repo) + integration (fp-autotest) |
 | [conventions/copilot-instructions-template.md](conventions/copilot-instructions-template.md) | Template for spoke repo `.github/copilot-instructions.md` |

@@ -25,8 +25,15 @@
 | Async work | `ProsessTaskHandler` — never raw threads/executors |
 | External REST | Java HttpClient configured via fp-felles |
 | GraphQL clients | Generated via fp-graphql from schema |
-| Contracts | Defined in fp-kontrakter, versioned |
+| Contracts | Defined in fp-kontrakter or in producer repos, versioned |
 | Business rules | fp-nare specification pattern in a SemVer library repo |
+
+## Contracts and module structure
+
+- Separate contracts for external consumers from internal domain types. Avoid exposing internal types to external consumers
+- Use fp-kontrakter for external contracts and multilateral fp-internal contracts. 
+- Place single producer fp-internal contracts in the producing repo as a separate kontrakt/kontrakter artifact, e.g. fp-abakus/kontrakter.
+- Use multiple modules only for large or wide repos with distinct subdomains.
 
 ## Unicorn stack — do not use as pattern
 

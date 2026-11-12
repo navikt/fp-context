@@ -15,7 +15,7 @@
 | Repo | Purpose |
 |------|---------|
 | fp-felles | Auth/OIDC, ABAC, JPA/DB, logging, REST clients, register integrations |
-| fp-kontrakter | Shared DTOs/schemas (multilateral + bilateral) |
+| fp-kontrakter | Shared DTOs/schemas (multilateral + some bilateral) |
 | fp-prosesstask | Async task framework (outbox/inbox/saga/scheduled) |
 | fp-nare | Rule engine (specification pattern, traceable evaluation trees) |
 | fp-tidsserie | Time-series of fom/tom/value segments |
